@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #080d18;
+    color: #e6edf7;
+    font-family: Arial, sans-serif;
+}
+
+/* Game Header */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 20px 30px;
+    background-color: #111b2e;
+    border-bottom: 2px solid #00e5ff;
+}
+
+.game-header h1 {
+    color: #00e5ff;
+    font-size: 25px;
+    margin: 0;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.game-info span {
+    display: inline-block;
+    background-color: #202e46;
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #354967;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #17263d;
+    color: #00e5ff;
+    border: 1px solid #00e5ff;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00e5ff;
+    color: #080d18;
+}
+
+/* Main container */
+main {
+    width: 92%;
+    max-width: 1400px;
+    margin: 30px auto;
+}
+
+/* Game Area */
+.game-area {
+    background-color: #101d32;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid #263b5a;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.game-area h2 {
+    color: #00e5ff;
+    letter-spacing: 3px;
+}
+
+.game-message {
+    display: inline-block;
+    color: #ffe66d;
+    background-color: #252b3b;
+    padding: 12px 20px;
+    border: 1px solid #ffe66d;
+    border-radius: 8px;
+}
+
+.game-world {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+
+    min-height: 320px;
+    padding: 25px;
+    margin-top: 20px;
+    background-color: #142945;
+    border: 2px solid #385b7d;
+    border-radius: 10px;
+}
+
+.game-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.player {
+    display: inline-block;
+    background-color: #293e60;
+    padding: 12px;
+    border: 2px solid #00e5ff;
+    border-radius: 12px;
+    font-size: 35px;
+}
+
+.star {
+    color: #ffe66d;
+    font-size: 35px;
+}
+
+.platform-row {
+    display: flex;
+    justify-content: center;
+}
+
+.platform {
+    background-color: #6249a8;
+    color: white;
+    padding: 12px 22px;
+    border: 2px solid #a78bfa;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.ground {
+    background-color: #183d42;
+    color: #6fffd2;
+    padding: 12px;
+    border: 1px solid #36c9ad;
+    border-radius: 6px;
+    letter-spacing: 2px;
+}
+
+/* Three Game Panels */
+.game-panels {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+}
+
+/* Common panel styling */
+.panel {
+    flex: 1;
+    min-width: 0;
+    padding: 22px;
+    background-color: #111b2e;
+    border: 1px solid #2b405e;
+    border-radius: 12px;
+}
+
+.panel h2 {
+    color: #00e5ff;
+    margin-top: 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #2b405e;
+}
+
+.description {
+    color: #8fa5c4;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hint {
+    color: #8fa5c4;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls h2,
+.controls .description {
+    align-self: stretch;
+}
+
+.control-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.control-row button {
+    width: 48px;
+    height: 45px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.jump-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.jump-button {
+    background-color: #00e5ff;
+    color: #080d18;
+    padding: 12px 35px;
+}
+
+/* Inventory */
+.inventory-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 85px;
+    min-height: 85px;
+    padding: 10px;
+    background-color: #1a2a42;
+    border: 1px solid #405574;
+    border-radius: 8px;
+}
+
+.item span {
+    font-size: 25px;
+}
+
+.item p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+/* Quest */
+.quest-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding: 14px 0;
+    border-bottom: 1px solid #2b405e;
+    font-size: 13px;
+}
+
+.progress {
+    color: #ffe66d;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Footer */
+footer {
+    background-color: #111b2e;
+    color: #8fa5c4;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+    border-top: 2px solid #00e5ff;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .game-header {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .game-panels {
+        flex-wrap: wrap;
+    }
+
+    .panel {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 94%;
+    }
+
+    .game-panels {
+        flex-direction: column;
+    }
+
+    .panel {
+        width: 100%;
+    }
+
+    .game-area {
+        padding: 15px;
+    }
+
+    .game-world {
+        padding: 15px;
+    }
+
+    .game-header {
+        padding: 20px 12px;
+    }
+
+    .game-info {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .game-header h1 {
+        font-size: 21px;
+    }
+
+    .game-info span {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    .inventory-items {
+        justify-content: center;
+    }
+
+    .game-message {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
